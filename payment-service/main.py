@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from models.payment import Payment
 
-app = FastAPI(root_path="/payments")
+app = FastAPI(title="Payment Service API", root_path="/payments")
 
 @app.get("/")
 def root():
